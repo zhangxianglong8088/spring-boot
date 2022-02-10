@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @date: 2022/2/10
  */
 @RestController
-public class TestController {
+public class UserController {
 
     @Value("${name}")
     private String name;
