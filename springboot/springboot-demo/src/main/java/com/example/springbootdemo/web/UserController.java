@@ -18,7 +18,7 @@ public class UserController {
 
     @GetMapping("test")
     public String test() {
-        System.out.println(name);
+        System.out.println("测试名称"+name);
         return "test";
     }
 
