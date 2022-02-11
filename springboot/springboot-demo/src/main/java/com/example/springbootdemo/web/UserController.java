@@ -1,5 +1,6 @@
 package com.example.springbootdemo.web;
 
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,8 +18,9 @@ public class UserController {
     private String name;
 
     @GetMapping("test")
+    @ApiOperation(value="获取用户列表", notes="")
     public String test() {
-        System.out.println("测试名称"+name);
+        System.out.println("测试名称" + name);
         return "test";
     }
 
