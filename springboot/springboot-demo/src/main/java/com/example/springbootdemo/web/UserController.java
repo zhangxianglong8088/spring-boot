@@ -1,7 +1,7 @@
 package com.example.springbootdemo.web;
 
-import com.example.springbootdemo.dao.domain.AccountingProject;
-import com.example.springbootdemo.dao.mapper.AccountingProjectMapper;
+import com.example.springbootdemo.dao.domain.AccountInfo;
+import com.example.springbootdemo.dao.mapper.AccountInfoMapper;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -21,7 +21,7 @@ import javax.annotation.Resource;
 public class UserController {
 
     @Resource
-    private AccountingProjectMapper accountingProjectMapper;
+    private AccountInfoMapper accountInfoMapper;
 
     @Value("${name}")
     private String name;
@@ -45,7 +45,7 @@ public class UserController {
 
     @GetMapping("accounting")
     public String accounting() {
-        AccountingProject accountingProject = accountingProjectMapper.selectByPrimaryKey(22L);
+        AccountInfo accountingProject = accountInfoMapper.selectByPrimaryKey(1);
         return "hello";
     }
 }

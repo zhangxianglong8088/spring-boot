@@ -1,0 +1,436 @@
+2022-02-18-11-28 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 1620771868
+2022-02-18-11-28 [SpringApplicationShutdownHook] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closing ...
+2022-02-18-11-28 [SpringApplicationShutdownHook] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+2022-02-18-14-42 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 2005 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-02-18-14-42 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-02-18-14-42 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-02-18-14-42 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 6 ms. Found 0 Neo4j repository interfaces.
+2022-02-18-14-42 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-02-18-14-42 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1967 ms
+2022-02-18-14-42 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-02-18-14-42 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-02-18-14-42 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-02-18-14-42 [main] [org.neo4j.driver.Driver] [INFO] - Direct driver instance 246383655 created for server address localhost:7687
+2022-02-18-14-42 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-18-14-42 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+2022-02-18-14-42 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+2022-02-18-14-42 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+2022-02-18-14-42 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 4.82 seconds (JVM running for 6.441)
+2022-02-18-14-44 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 246383655
+2022-02-18-14-44 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 2338 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-02-18-14-44 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-02-18-14-44 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-02-18-14-44 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 5 ms. Found 0 Neo4j repository interfaces.
+2022-02-18-14-44 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-02-18-14-44 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1409 ms
+2022-02-18-14-44 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-02-18-14-44 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-02-18-14-44 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-02-18-14-44 [main] [org.neo4j.driver.Driver] [INFO] - Direct driver instance 962784388 created for server address localhost:7687
+2022-02-18-14-44 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-18-14-44 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+2022-02-18-14-44 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+2022-02-18-14-44 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+2022-02-18-14-44 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 3.456 seconds (JVM running for 4.207)
+2022-02-18-14-45 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 962784388
+2022-02-18-14-46 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 2584 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-02-18-14-46 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-02-18-14-46 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-02-18-14-46 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 5 ms. Found 0 Neo4j repository interfaces.
+2022-02-18-14-46 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-02-18-14-46 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1557 ms
+2022-02-18-14-46 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-02-18-14-46 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-02-18-14-46 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-02-18-14-46 [main] [org.neo4j.driver.Driver] [INFO] - Direct driver instance 912060263 created for server address localhost:7687
+2022-02-18-14-46 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-18-14-46 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+2022-02-18-14-46 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+2022-02-18-14-46 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+2022-02-18-14-46 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 4.099 seconds (JVM running for 4.85)
+2022-02-18-15-21 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 912060263
+2022-02-18-15-21 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 7877 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-02-18-15-21 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-02-18-15-21 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-02-18-15-21 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 5 ms. Found 0 Neo4j repository interfaces.
+2022-02-18-15-21 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-02-18-15-21 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1473 ms
+2022-02-18-15-21 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-02-18-15-21 [main] [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] [WARN] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountingProjectMapper' defined in file [/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes/com/example/springbootdemo/dao/mapper/AccountingProjectMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2022-02-18-15-21 [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] [ERROR] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles dev are currently active).
+
+2022-02-18-15-22 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 8045 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-02-18-15-22 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-02-18-15-22 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-02-18-15-22 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 6 ms. Found 0 Neo4j repository interfaces.
+2022-02-18-15-22 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-02-18-15-22 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1538 ms
+2022-02-18-15-22 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-02-18-15-22 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-02-18-15-22 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-02-18-15-22 [main] [org.neo4j.driver.Driver] [INFO] - Direct driver instance 1280730191 created for server address localhost:7687
+2022-02-18-15-22 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-18-15-22 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+2022-02-18-15-22 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+2022-02-18-15-22 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+2022-02-18-15-22 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 3.861 seconds (JVM running for 4.643)
+2022-02-18-15-22 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+2022-02-18-15-22 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 2 ms
+2022-02-18-15-24 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 1280730191
+2022-02-18-15-24 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 8348 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-02-18-15-24 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-02-18-15-24 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-02-18-15-24 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 5 ms. Found 0 Neo4j repository interfaces.
+2022-02-18-15-24 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-02-18-15-24 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1511 ms
+2022-02-18-15-24 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-02-18-15-24 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-02-18-15-24 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-02-18-15-24 [main] [org.neo4j.driver.Driver] [INFO] - Direct driver instance 1108374296 created for server address localhost:7687
+2022-02-18-15-24 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-18-15-24 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+2022-02-18-15-24 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+2022-02-18-15-24 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+2022-02-18-15-24 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 3.687 seconds (JVM running for 4.35)
+2022-02-18-15-24 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+2022-02-18-15-24 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 2 ms
+2022-02-18-15-25 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 1108374296
+2022-02-18-15-25 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 8581 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-02-18-15-25 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-02-18-15-25 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-02-18-15-25 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 5 ms. Found 0 Neo4j repository interfaces.
+2022-02-18-15-25 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-02-18-15-25 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1379 ms
+2022-02-18-15-25 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-02-18-15-25 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-02-18-15-25 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-02-18-15-25 [main] [org.neo4j.driver.Driver] [INFO] - Direct driver instance 1108374296 created for server address localhost:7687
+2022-02-18-15-25 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-18-15-25 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+2022-02-18-15-25 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+2022-02-18-15-25 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+2022-02-18-15-25 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 3.378 seconds (JVM running for 4.054)
+2022-02-18-15-26 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+2022-02-18-15-26 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 1 ms
+2022-02-18-15-26 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 1108374296
+2022-02-18-15-27 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 8777 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-02-18-15-27 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-02-18-15-27 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-02-18-15-27 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 5 ms. Found 0 Neo4j repository interfaces.
+2022-02-18-15-27 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-02-18-15-27 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1518 ms
+2022-02-18-15-27 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-02-18-15-27 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-02-18-15-27 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-02-18-15-27 [main] [org.neo4j.driver.Driver] [INFO] - Direct driver instance 188241890 created for server address localhost:7687
+2022-02-18-15-27 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-18-15-27 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+2022-02-18-15-27 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+2022-02-18-15-27 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+2022-02-18-15-27 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 3.624 seconds (JVM running for 4.214)
+2022-02-18-15-27 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+2022-02-18-15-27 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 1 ms
+2022-02-18-15-27 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 188241890
+2022-02-18-15-27 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 8889 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-02-18-15-27 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-02-18-15-27 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-02-18-15-27 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 9 ms. Found 0 Neo4j repository interfaces.
+2022-02-18-15-27 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-02-18-15-27 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1601 ms
+2022-02-18-15-27 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-02-18-15-27 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-02-18-15-27 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-02-18-15-27 [main] [org.neo4j.driver.Driver] [INFO] - Direct driver instance 999749808 created for server address localhost:7687
+2022-02-18-15-27 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-18-15-27 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+2022-02-18-15-27 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+2022-02-18-15-27 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+2022-02-18-15-27 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 3.783 seconds (JVM running for 4.495)
+2022-02-18-15-27 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+2022-02-18-15-27 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 1 ms
+2022-02-18-15-28 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 999749808
+2022-02-18-15-31 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 9508 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-02-18-15-31 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-02-18-15-31 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-02-18-15-31 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 7 ms. Found 0 Neo4j repository interfaces.
+2022-02-18-15-31 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-02-18-15-31 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1538 ms
+2022-02-18-15-31 [main] [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] [WARN] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'asynTransfer': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.springbootdemo.service.Task' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+2022-02-18-15-31 [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] [ERROR] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'com.example.springbootdemo.service.Task' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.springbootdemo.service.Task' in your configuration.
+
+2022-02-18-15-32 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 9654 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-02-18-15-32 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-02-18-15-32 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-02-18-15-32 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 6 ms. Found 0 Neo4j repository interfaces.
+2022-02-18-15-32 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-02-18-15-32 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1635 ms
+2022-02-18-15-32 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-02-18-15-32 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-02-18-15-32 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-02-18-15-32 [main] [org.neo4j.driver.Driver] [INFO] - Direct driver instance 26030311 created for server address localhost:7687
+2022-02-18-15-32 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-18-15-32 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+2022-02-18-15-32 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+2022-02-18-15-32 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+2022-02-18-15-32 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 3.937 seconds (JVM running for 4.619)
+2022-02-18-15-32 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+2022-02-18-15-32 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 2 ms
+2022-02-18-15-33 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 26030311
+2022-02-18-15-33 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 9820 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-02-18-15-33 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-02-18-15-33 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-02-18-15-33 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 5 ms. Found 0 Neo4j repository interfaces.
+2022-02-18-15-33 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-02-18-15-33 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1465 ms
+2022-02-18-15-33 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-02-18-15-33 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-02-18-15-33 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-02-18-15-33 [main] [org.neo4j.driver.Driver] [INFO] - Direct driver instance 104105431 created for server address localhost:7687
+2022-02-18-15-33 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-18-15-33 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+2022-02-18-15-33 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+2022-02-18-15-33 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+2022-02-18-15-33 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 3.909 seconds (JVM running for 4.677)
+2022-02-18-15-34 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+2022-02-18-15-34 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 2 ms
+2022-02-18-15-39 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 104105431
+2022-02-18-15-39 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 10798 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-02-18-15-39 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-02-18-15-39 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-02-18-15-39 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 5 ms. Found 0 Neo4j repository interfaces.
+2022-02-18-15-39 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-02-18-15-39 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1658 ms
+2022-02-18-15-39 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-02-18-15-39 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-02-18-15-39 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-02-18-15-39 [main] [org.neo4j.driver.Driver] [INFO] - Direct driver instance 602572848 created for server address localhost:7687
+2022-02-18-15-39 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-18-15-39 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+2022-02-18-15-39 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+2022-02-18-15-39 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+2022-02-18-15-39 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 3.96 seconds (JVM running for 4.691)
+2022-02-18-15-40 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+2022-02-18-15-40 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 1 ms
+2022-02-18-15-40 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 602572848
+2022-02-18-15-59 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 13719 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-02-18-15-59 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-02-18-15-59 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-02-18-15-59 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 5 ms. Found 0 Neo4j repository interfaces.
+2022-02-18-15-59 [main] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [INFO] - Bean 'customizeAsyncConfigurer' of type [com.example.springbootdemo.config.CustomizeAsyncConfigurer$$EnhancerBySpringCGLIB$$4e48a2da] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-18-15-59 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-02-18-15-59 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1899 ms
+2022-02-18-15-59 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-02-18-15-59 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-02-18-15-59 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-02-18-15-59 [main] [org.neo4j.driver.Driver] [INFO] - Direct driver instance 1188100252 created for server address localhost:7687
+2022-02-18-15-59 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-18-15-59 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+2022-02-18-15-59 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+2022-02-18-15-59 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+2022-02-18-15-59 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 4.34 seconds (JVM running for 5.02)
+2022-02-18-15-59 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+2022-02-18-15-59 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 2 ms
+2022-02-18-16-00 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 1188100252
+2022-02-18-16-00 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 13854 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-02-18-16-00 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-02-18-16-00 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-02-18-16-00 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 5 ms. Found 0 Neo4j repository interfaces.
+2022-02-18-16-00 [main] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [INFO] - Bean 'customizeAsyncConfigurer' of type [com.example.springbootdemo.config.CustomizeAsyncConfigurer$$EnhancerBySpringCGLIB$$c6002b3a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-18-16-00 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-02-18-16-00 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1659 ms
+2022-02-18-16-00 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-02-18-16-00 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-02-18-16-00 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-02-18-16-00 [main] [org.neo4j.driver.Driver] [INFO] - Direct driver instance 547468206 created for server address localhost:7687
+2022-02-18-16-00 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-18-16-00 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+2022-02-18-16-00 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+2022-02-18-16-00 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+2022-02-18-16-00 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 3.811 seconds (JVM running for 4.507)
+2022-02-18-16-00 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+2022-02-18-16-00 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 1 ms
+2022-02-18-16-01 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 547468206
+2022-02-18-16-41 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 17300 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-02-18-16-41 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-02-18-16-41 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-02-18-16-41 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 5 ms. Found 0 Neo4j repository interfaces.
+2022-02-18-16-41 [main] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [INFO] - Bean 'customizeAsyncConfigurer' of type [com.example.springbootdemo.config.CustomizeAsyncConfigurer$$EnhancerBySpringCGLIB$$ce858889] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-18-16-41 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-02-18-16-41 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1891 ms
+2022-02-18-16-41 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-02-18-16-41 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-02-18-16-41 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-02-18-16-41 [main] [org.neo4j.driver.Driver] [INFO] - Direct driver instance 98550436 created for server address localhost:7687
+2022-02-18-16-41 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-18-16-41 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+2022-02-18-16-41 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+2022-02-18-16-41 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+2022-02-18-16-41 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 4.223 seconds (JVM running for 4.972)
+2022-02-18-16-41 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+2022-02-18-16-41 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 1 ms
+2022-02-18-16-45 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 98550436
+2022-02-18-16-45 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 17979 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-02-18-16-45 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-02-18-16-45 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-02-18-16-45 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 5 ms. Found 0 Neo4j repository interfaces.
+2022-02-18-16-45 [main] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [INFO] - Bean 'customizeAsyncConfigurer' of type [com.example.springbootdemo.config.CustomizeAsyncConfigurer$$EnhancerBySpringCGLIB$$81511221] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-18-16-45 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-02-18-16-45 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1617 ms
+2022-02-18-16-45 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-02-18-16-45 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-02-18-16-45 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-02-18-16-45 [main] [org.neo4j.driver.Driver] [INFO] - Direct driver instance 2020725345 created for server address localhost:7687
+2022-02-18-16-45 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-18-16-45 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+2022-02-18-16-45 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+2022-02-18-16-45 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+2022-02-18-16-45 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 3.879 seconds (JVM running for 4.722)
+2022-02-18-16-45 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+2022-02-18-16-45 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 2 ms
+2022-02-18-16-56 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 2020725345
+2022-02-18-16-56 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 19605 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-02-18-16-56 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-02-18-16-56 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-02-18-16-56 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 5 ms. Found 0 Neo4j repository interfaces.
+2022-02-18-16-56 [main] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [INFO] - Bean 'customizeAsyncConfigurer' of type [com.example.springbootdemo.config.CustomizeAsyncConfigurer$$EnhancerBySpringCGLIB$$df5c85a7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-18-16-56 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-02-18-16-56 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1572 ms
+2022-02-18-16-56 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-02-18-16-56 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-02-18-16-56 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-02-18-16-56 [main] [org.neo4j.driver.Driver] [INFO] - Direct driver instance 1590842898 created for server address localhost:7687
+2022-02-18-16-56 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-18-16-56 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+2022-02-18-16-56 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+2022-02-18-16-56 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+2022-02-18-16-56 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 3.845 seconds (JVM running for 4.597)
+2022-02-18-16-56 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+2022-02-18-16-56 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 2 ms
+2022-02-18-16-57 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 1590842898
+2022-02-18-16-57 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 19754 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-02-18-16-57 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-02-18-16-57 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-02-18-16-57 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 10 ms. Found 0 Neo4j repository interfaces.
+2022-02-18-16-57 [main] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [INFO] - Bean 'customizeAsyncConfigurer' of type [com.example.springbootdemo.config.CustomizeAsyncConfigurer$$EnhancerBySpringCGLIB$$ce858889] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-18-16-57 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-02-18-16-57 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1595 ms
+2022-02-18-16-57 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-02-18-16-57 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-02-18-16-57 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-02-18-16-57 [main] [org.neo4j.driver.Driver] [INFO] - Direct driver instance 443638755 created for server address localhost:7687
+2022-02-18-16-57 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-18-16-57 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+2022-02-18-16-57 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+2022-02-18-16-57 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+2022-02-18-16-57 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 3.73 seconds (JVM running for 4.48)
+2022-02-18-16-57 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+2022-02-18-16-57 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 2 ms
+2022-02-18-16-57 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 443638755
+2022-02-18-16-57 [SpringApplicationShutdownHook] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closing ...
+2022-02-18-16-57 [SpringApplicationShutdownHook] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+2022-02-18-17-20 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 23176 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-02-18-17-20 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-02-18-17-20 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-02-18-17-20 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 6 ms. Found 0 Neo4j repository interfaces.
+2022-02-18-17-20 [main] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [INFO] - Bean 'customizeAsyncConfigurer' of type [com.example.springbootdemo.config.CustomizeAsyncConfigurer$$EnhancerBySpringCGLIB$$81511221] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-18-17-20 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-02-18-17-20 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1684 ms
+2022-02-18-17-20 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-02-18-17-20 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-02-18-17-20 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-02-18-17-20 [main] [org.neo4j.driver.Driver] [INFO] - Direct driver instance 1467208305 created for server address localhost:7687
+2022-02-18-17-20 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-18-17-20 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+2022-02-18-17-20 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+2022-02-18-17-20 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+2022-02-18-17-20 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 4.285 seconds (JVM running for 5.033)
+2022-02-18-17-20 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+2022-02-18-17-20 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 2 ms
+2022-02-18-17-21 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 1467208305
+2022-02-18-17-21 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 23335 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-02-18-17-21 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-02-18-17-21 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-02-18-17-21 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 6 ms. Found 0 Neo4j repository interfaces.
+2022-02-18-17-21 [main] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [INFO] - Bean 'customizeAsyncConfigurer' of type [com.example.springbootdemo.config.CustomizeAsyncConfigurer$$EnhancerBySpringCGLIB$$c93c9ef1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-18-17-21 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-02-18-17-21 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1600 ms
+2022-02-18-17-21 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-02-18-17-21 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-02-18-17-21 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-02-18-17-21 [main] [org.neo4j.driver.Driver] [INFO] - Direct driver instance 1955136744 created for server address localhost:7687
+2022-02-18-17-21 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-18-17-21 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+2022-02-18-17-21 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+2022-02-18-17-21 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+2022-02-18-17-21 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 3.868 seconds (JVM running for 4.531)
+2022-02-18-17-21 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+2022-02-18-17-21 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 1 ms
+2022-02-18-17-23 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 1955136744
+2022-02-18-17-23 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 23636 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-02-18-17-23 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-02-18-17-23 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-02-18-17-23 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 7 ms. Found 0 Neo4j repository interfaces.
+2022-02-18-17-23 [main] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [INFO] - Bean 'customizeAsyncConfigurer' of type [com.example.springbootdemo.config.CustomizeAsyncConfigurer$$EnhancerBySpringCGLIB$$1f30a7cb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-18-17-23 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-02-18-17-23 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1661 ms
+2022-02-18-17-23 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-02-18-17-23 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-02-18-17-23 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-02-18-17-23 [main] [org.neo4j.driver.Driver] [INFO] - Direct driver instance 1414953733 created for server address localhost:7687
+2022-02-18-17-23 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-18-17-23 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+2022-02-18-17-23 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+2022-02-18-17-23 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+2022-02-18-17-23 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 3.972 seconds (JVM running for 4.642)
+2022-02-18-17-23 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+2022-02-18-17-23 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 2 ms
+2022-02-18-17-24 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 1414953733
+2022-02-18-17-24 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 23848 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-02-18-17-24 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-02-18-17-24 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-02-18-17-24 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 7 ms. Found 0 Neo4j repository interfaces.
+2022-02-18-17-24 [main] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [INFO] - Bean 'customizeAsyncConfigurer' of type [com.example.springbootdemo.config.CustomizeAsyncConfigurer$$EnhancerBySpringCGLIB$$df5c85a7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-02-18-17-24 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-02-18-17-24 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1584 ms
+2022-02-18-17-24 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-02-18-17-24 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-02-18-17-24 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-02-18-17-24 [main] [org.neo4j.driver.Driver] [INFO] - Direct driver instance 1457899771 created for server address localhost:7687
+2022-02-18-17-24 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-18-17-24 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+2022-02-18-17-24 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+2022-02-18-17-24 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+2022-02-18-17-24 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 3.792 seconds (JVM running for 4.564)
+2022-02-18-17-24 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+2022-02-18-17-24 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 2 ms
+2022-02-18-17-25 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 1457899771
