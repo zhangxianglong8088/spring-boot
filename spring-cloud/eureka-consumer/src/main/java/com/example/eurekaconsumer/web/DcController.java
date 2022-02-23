@@ -1,5 +1,6 @@
 package com.example.eurekaconsumer.web;
 
+import com.example.eurekaconsumer.service.ConsumerService;
 import com.example.eurekaconsumer.service.DcClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
@@ -22,6 +23,8 @@ public class DcController {
     LoadBalancerClient loadBalancerClient;
     @Autowired
     RestTemplate restTemplate;
+    @Resource
+    private ConsumerService consumerService;
 
     @Resource
     DcClient dcClient;
@@ -44,5 +47,14 @@ public class DcController {
     @GetMapping("/consumer/feign")
     public String dcByFeign() {
         return dcClient.consumer();
+    }
+
+    /**
+     * 测试hystrix超时
+     * @return
+     */
+    @GetMapping("/consumer/hystrix")
+    public String hysteria() {
+        return consumerService.consumer();
     }
 }
