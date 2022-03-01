@@ -36,38 +36,38 @@
         network.moveTo({scale: 0.8});
         //先初始化一个节点
         $.ajax({
-            url:'neo4j/init',
-            async:false,
-            success: function(ret) {
-                if(ret){
-                    createNetwork({nodes:ret.nodeList});
-                    for(var i=0;i<ret.nodeList.length;i++){
+            url: 'neo4j/init',
+            async: false,
+            success: function (ret) {
+                if (ret) {
+                    createNetwork({nodes: ret.nodeList});
+                    for (var i = 0; i < ret.nodeList.length; i++) {
                         var nodeId = (ret.nodeList)[i].nodeId;
                         getData(nodeId);
                     }
-                }else{
+                } else {
                     layer.msg("查询失败");
                 }
             }
         });
-        network.on("dragEnd", function(params){
-            if (params.nodes&&params.nodes.length > 0){
-                network.clustering.updateClusteredNode(params.nodes[0], {physics : false});
+        network.on("dragEnd", function (params) {
+            if (params.nodes && params.nodes.length > 0) {
+                network.clustering.updateClusteredNode(params.nodes[0], {physics: false});
             }
         });
-        //双击扩展
-        network.on("doubleClick",function (params) {
-            // 取出当前节点在Vis的节点ID
-            var nodeId = params.nodes[0];
-            if(nodeExtendArr.indexOf(nodeId) != -1){
-                layer.msg("该节点已经扩展");
-            }else{
-                getData(nodeId);
-            }
-        });
+        // //双击扩展
+        // network.on("doubleClick",function (params) {
+        //     // 取出当前节点在Vis的节点ID
+        //     var nodeId = params.nodes[0];
+        //     if(nodeExtendArr.indexOf(nodeId) != -1){
+        //         layer.msg("该节点已经扩展");
+        //     }else{
+        //         getData(nodeId);
+        //     }
+        // });
     });
 
-    function init(){
+    function init() {
         // 创建节点对象
         nodes = new vis.DataSet([]);
         // 创建连线对象
@@ -78,17 +78,17 @@
         //全局设置，每个节点和关系的属性会覆盖全局设置
         var options = {
             //设置节点形状
-            nodes:{
+            nodes: {
                 shape: 'dot',//采用远点的形式
                 size: 30,
-                font:{
-                    face:'Microsoft YaHei'
+                font: {
+                    face: 'Microsoft YaHei'
                 }
             },
             // 设置关系连线
-            edges:{
-                font:{
-                    face:'Microsoft YaHei'
+            edges: {
+                font: {
+                    face: 'Microsoft YaHei'
                 }
             },
             //设置节点的相互作用
@@ -115,20 +115,20 @@
     }
 
     //获取id扩展后的数据
-    function getData(id){
-        var tipMsg = layer.msg('数据加载中，请稍等...', {icon: 16,shade:[0.1,'#000'],time:0,offset:'250px'});
+    function getData(id) {
+        var tipMsg = layer.msg('数据加载中，请稍等...', {icon: 16, shade: [0.1, '#000'], time: 0, offset: '250px'});
         //该节点已扩展
         nodeExtendArr.push(id);
         $.ajax({
-            url:'neo4j/builder/r',
-            data:{
-                id:id //当前节点id
+            url: 'neo4j/builder/r',
+            data: {
+                id: id //当前节点id
             },
-            success: function(ret) {
+            success: function (ret) {
                 layer.close(tipMsg);
-                if(ret){
-                    createNetwork({nodes:ret.nodeList,edges:ret.edgeList});
-                }else{
+                if (ret) {
+                    createNetwork({nodes: ret.nodeList, edges: ret.edgeList});
+                } else {
                     layer.msg("查询失败");
                 }
             }
@@ -138,56 +138,56 @@
     //扩展节点 param nodes和relation集合
     function createNetwork(param) {
         //可以试试注释掉去重的方法看看效果
-        if(param.nodes && param.nodes.length>0){
+        if (param.nodes && param.nodes.length > 0) {
             //去除已存在的节点  以“id”属性为例删除重复节点，根据具体的属性自行修改
-            for(var i in network.body.data.nodes._data){
+            for (var i in network.body.data.nodes._data) {
                 var nodeTemp = network.body.data.nodes._data[i];
-                param.nodes = deleteValueFromArr(param.nodes,"nodeId",nodeTemp.id);
+                param.nodes = deleteValueFromArr(param.nodes, "nodeId", nodeTemp.id);
             }
-            if(param.nodes && param.nodes.length>0){
+            if (param.nodes && param.nodes.length > 0) {
                 //添加节点
-                for(var i=0;i<param.nodes.length;i++){
+                for (var i = 0; i < param.nodes.length; i++) {
                     var node = param.nodes[i];
                     //控制背景色 不同类型的节点颜色不同
                     var background = "#97C2FC";
                     //人
-                    if(node.name && node.name!=""){
+                    if (node.name && node.name != "") {
                         background = "#FFD86E";
                     }
                     //电影
-                    else if(node.title && node.title!=""){
+                    else if (node.title && node.title != "") {
                         background = "#6DCE9E";
                     }
                     //拼接返回的结果显示在图上
                     var label = "";
-                    for(var n in node){
+                    for (var n in node) {
                         label += n + ":" + node[n] + "\n";
                     }
                     nodes.add({
                         id: node.nodeId,
                         label: label,
-                        color:{
-                            background:background
+                        color: {
+                            background: background
                         }
                     });
                 }
-            }else{
+            } else {
                 // layer.msg("无扩展信息");
             }
         }
-        if(param.edges && param.edges.length>0){
+        if (param.edges && param.edges.length > 0) {
             //去除已存在的关系
-            for(var i in network.body.data.edges._data){
+            for (var i in network.body.data.edges._data) {
                 var edgeTemp = network.body.data.edges._data[i];
-                param.edges = deleteValueFromArr(param.edges,"edgeId",edgeTemp.id);
+                param.edges = deleteValueFromArr(param.edges, "edgeId", edgeTemp.id);
             }
-            if(param.edges && param.edges.length>0) {
+            if (param.edges && param.edges.length > 0) {
                 //添加关系
                 for (var i = 0; i < param.edges.length; i++) {
                     var edge = param.edges[i];
                     //拼接返回的结果显示在图上  根据数据库属性存储的格式进行调整
                     var label = "";
-                    for(var n in edge.roles){
+                    for (var n in edge.roles) {
                         label += edge.roles[n] + " ";
                     }
                     edges.add({
@@ -204,42 +204,43 @@
         }
     }
 
-    $('input[type=checkbox][name=checkbox]').change(function(e) {
-        for(var i in network.body.data.nodes._data){
-            if(network.body.data.nodes._data[i].label.indexOf("title")!=-1 && e.target.value == "Movie" && !e.currentTarget.checked){
-                network.clustering.updateClusteredNode(i, {hidden : true});
-            }else if(network.body.data.nodes._data[i].label.indexOf("name")!=-1 && e.target.value == "Person" && !e.currentTarget.checked){
-                network.clustering.updateClusteredNode(i, {hidden : true});
-            }else{
-                network.clustering.updateClusteredNode(i, {hidden : false});
+    $('input[type=checkbox][name=checkbox]').change(function (e) {
+        for (var i in network.body.data.nodes._data) {
+            if (network.body.data.nodes._data[i].label.indexOf("title") != -1 && e.target.value == "Movie" && !e.currentTarget.checked) {
+                network.clustering.updateClusteredNode(i, {hidden: true});
+            } else if (network.body.data.nodes._data[i].label.indexOf("name") != -1 && e.target.value == "Person" && !e.currentTarget.checked) {
+                network.clustering.updateClusteredNode(i, {hidden: true});
+            } else {
+                network.clustering.updateClusteredNode(i, {hidden: false});
             }
         }
     });
 
     //根据对象组数中的某个属性值进行过滤删除
     //arrName数组名  field过滤的字段   keyValue字段值
-    function deleteValueFromArr(arrName,field,keyValue){
-        if(arrName==null || arrName.length==0){
+    function deleteValueFromArr(arrName, field, keyValue) {
+        if (arrName == null || arrName.length == 0) {
             return null;
         }
-        for (var i =0;i< arrName.length;i++){
-            if(arrName[i][field]==keyValue){
-                arrName.splice(i,1);
+        for (var i = 0; i < arrName.length; i++) {
+            if (arrName[i][field] == keyValue) {
+                arrName.splice(i, 1);
             }
         }
         return arrName;
     }
+
     //根据对象数组中的某个属性值获取过滤后的数组
     //arrName数组名  field过滤的字段   keyValue字段值
-    function getArrFromArr(arrName,field,keyValue){
-        var arrReturn=[];
-        if(arrName==null || arrName.length==0){
+    function getArrFromArr(arrName, field, keyValue) {
+        var arrReturn = [];
+        if (arrName == null || arrName.length == 0) {
             return arrReturn;
         }
         var obj;
-        for (var item=0; item< arrName.length;item++){
-            obj=arrName[item];
-            if(obj[field]==keyValue){
+        for (var item = 0; item < arrName.length; item++) {
+            obj = arrName[item];
+            if (obj[field] == keyValue) {
                 arrReturn.push(obj);
             }
         }
