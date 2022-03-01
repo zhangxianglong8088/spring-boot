@@ -36,7 +36,7 @@
         network.moveTo({scale: 0.8});
         //先初始化一个节点
         $.ajax({
-            url:'/get',
+            url:'neo4j/init',
             async:false,
             success: function(ret) {
                 if(ret){
@@ -120,7 +120,7 @@
         //该节点已扩展
         nodeExtendArr.push(id);
         $.ajax({
-            url:'/getPath',
+            url:'neo4j/builder/r',
             data:{
                 id:id //当前节点id
             },
@@ -172,7 +172,7 @@
                     });
                 }
             }else{
-                layer.msg("无扩展信息");
+                // layer.msg("无扩展信息");
             }
         }
         if(param.edges && param.edges.length>0){
