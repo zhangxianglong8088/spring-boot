@@ -30,7 +30,7 @@ public class TestController {
     }
 
     /**
-     * 建立各个节点之间的关系
+     * 初始化建立各个节点之间的关系
      *
      * @param id
      * @return
@@ -61,11 +61,13 @@ public class TestController {
     public Map<String, Object> getRelation(String id) {
         Map<String, Object> retMap = new HashMap<>();
         //cql语句  ID()可以获取节点自动生成的id
-        String cql = "match l=(m)-[]-(n) where ID(m)=" + 199 + " return l";
+        String cql = "MATCH a=(:service {name:'accounting'})-[r:follow*]->() RETURN nodes(a)" +
+                " Union" +
+                " ALL MATCH a=()-[r:follow*]->(:service {name:'accounting'}) RETURN nodes(a)";
         //待返回的值，与cql return后的值顺序对应
         Set<Map<String, Object>> nodeList = new HashSet<>();
         Set<Map<String, Object>> edgeList = new HashSet<>();
-        Neo4jUtil.getPathList(cql, nodeList, edgeList);
+        Neo4jUtil.getList(cql, nodeList, edgeList);
         retMap.put("nodeList", nodeList);
         retMap.put("edgeList", edgeList);
         return retMap;

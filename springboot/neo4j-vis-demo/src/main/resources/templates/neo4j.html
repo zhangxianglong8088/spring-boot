@@ -55,16 +55,13 @@
                 network.clustering.updateClusteredNode(params.nodes[0], {physics: false});
             }
         });
-        // //双击扩展
-        // network.on("doubleClick",function (params) {
-        //     // 取出当前节点在Vis的节点ID
-        //     var nodeId = params.nodes[0];
-        //     if(nodeExtendArr.indexOf(nodeId) != -1){
-        //         layer.msg("该节点已经扩展");
-        //     }else{
-        //         getData(nodeId);
-        //     }
-        // });
+
+        //双击
+        network.on("doubleClick", function (params) {
+            // 取出当前节点在Vis的节点ID
+            var nodeId = params.nodes[0];
+            buildeRelation(nodeId);
+        });
     });
 
     function init() {
@@ -134,6 +131,30 @@
             }
         });
     }
+
+
+    //渲染指定节点相关的节点关系
+    function buildeRelation(id) {
+        var tipMsg = layer.msg('数据加载中，请稍等...', {icon: 16, shade: [0.1, '#000'], time: 0, offset: '250px'});
+        //该节点已扩展
+        nodeExtendArr.push(id);
+        $.ajax({
+            url: 'neo4j/getRelation',
+            data: {
+                id: id //当前节点id
+            },
+            success: function (ret) {
+                layer.close(tipMsg);
+                if (ret) {
+                    createNetwork({nodes: ret.nodeList, edges: ret.edgeList});
+                } else {
+                    layer.msg("查询失败");
+                }
+            }
+        });
+    }
+
+
 
     //扩展节点 param nodes和relation集合
     function createNetwork(param) {
