@@ -41,6 +41,10 @@
             success: function(ret) {
                 if(ret){
                     createNetwork({nodes:ret.nodeList});
+                    for(var i=0;i<ret.nodeList.length;i++){
+                        var nodeId = (ret.nodeList)[i].nodeId;
+                        getData(nodeId);
+                    }
                 }else{
                     layer.msg("查询失败");
                 }
