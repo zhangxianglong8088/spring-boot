@@ -17,8 +17,10 @@
     </style>
 </head>
 <body>
-显示节点
-<input type="checkbox" name="checkbox" checked value="Person"/>
+<input type=text id="serverId"/>
+
+<input type="button" id="btn" value="查询"/>
+
 <div id="network_id" class="network"></div><!-- 拓扑图容器-->
 <script>
     //拓扑
@@ -29,6 +31,9 @@
     var edges;
     // 已扩展的节点
     var nodeExtendArr = new Array();
+
+    var aaa = new Array();
+
 
     $(function () {
         init();
@@ -41,6 +46,7 @@
             success: function (ret) {
                 if (ret) {
                     createNetwork({nodes: ret.nodeList});
+                    //循环构建各个节点之间的关系
                     for (var i = 0; i < ret.nodeList.length; i++) {
                         var nodeId = (ret.nodeList)[i].nodeId;
                         getData(nodeId);
@@ -50,6 +56,8 @@
                 }
             }
         });
+
+
         network.on("dragEnd", function (params) {
             if (params.nodes && params.nodes.length > 0) {
                 network.clustering.updateClusteredNode(params.nodes[0], {physics: false});
@@ -62,8 +70,42 @@
             var nodeId = params.nodes[0];
             buildeRelation(nodeId);
         });
+
+
+        $('#btn').bind('click', function () {
+            init();
+            //修改初始缩放
+            network.moveTo({scale: 0.8});
+            //先初始化一个节点
+            $.ajax({
+                url: 'neo4j/getByName',
+                async: true,
+                data: {
+                    serviceName:$(" #serverId").val(),
+                },
+                success: function (ret) {
+                    if (ret) {
+                        createNetwork({nodes: ret.nodeList});
+                        var nodeIdList = new Array();
+                        for(var i=0;i<ret.nodeList.length;i++) {
+                            nodeIdList.push(ret.nodeList[i].nodeId);
+                        }
+                        //循环构建各个节点之间的关系
+                        for (var i = 0; i < ret.nodeList.length; i++) {
+                            var nodeId = (ret.nodeList)[i].nodeId;
+                            hello(nodeId,nodeIdList);
+                        }
+                    } else {
+                        layer.msg("查询失败");
+                    }
+                }
+            });
+        });
     });
 
+    /**
+     * 初始化显示的div
+     */
     function init() {
         // 创建节点对象
         nodes = new vis.DataSet([]);
@@ -133,15 +175,16 @@
     }
 
 
-    //渲染指定节点相关的节点关系
-    function buildeRelation(id) {
+    //获取id扩展后的数据
+    function hello(id,nodeIdList) {
         var tipMsg = layer.msg('数据加载中，请稍等...', {icon: 16, shade: [0.1, '#000'], time: 0, offset: '250px'});
         //该节点已扩展
         nodeExtendArr.push(id);
         $.ajax({
-            url: 'neo4j/getRelation',
+            url: 'neo4j/builder/r',
             data: {
-                id: id //当前节点id
+                nodeIdList:nodeIdList.toString(),
+                id: id ,//当前节点id
             },
             success: function (ret) {
                 layer.close(tipMsg);
@@ -154,6 +197,29 @@
         });
     }
 
+    //渲染指定节点相关的节点关系
+    function buildeRelation(id) {
+        var tipMsg = layer.msg('数据加载中，请稍等...', {icon: 16, shade: [0.1, '#000'], time: 0, offset: '250px'});
+        //该节点已扩展
+        nodeExtendArr.push(id);
+        $.ajax({
+            url: 'neo4j/getRelation?',
+            data: {
+                id: id //当前节点id
+            },
+            success: function (ret) {
+                if (ret) {
+                    aaa = ret.nodeList;
+                    createNetwork({nodes: ret.nodeList});
+                    //循环构建各个节点之间的关系
+                    for (var i = 0; i < aaa.nodeList.length; i++) {
+                        var nodeId = (aaa.nodeList)[i].nodeId;
+                        getData(nodeId);
+                    }
+                }
+            }
+        });
+    }
 
 
     //扩展节点 param nodes和relation集合
@@ -224,6 +290,7 @@
             }
         }
     }
+
 
     $('input[type=checkbox][name=checkbox]').change(function (e) {
         for (var i in network.body.data.nodes._data) {

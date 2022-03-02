@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * 通用的neo4j调用类
@@ -27,9 +28,10 @@ public class Neo4jUtil {
 
     /**
      * cql的return返回多种节点match (n)-[edge]-(n) return n,m,edge：限定返回关系时，关系的别名必须“包含”edge
-     * @param cql 查询语句
+     *
+     * @param cql   查询语句
      * @param lists 和cql的return返回节点顺序对应
-     * @return List<Map<String,Object>>
+     * @return List<Map < String, Object>>
      */
     public static <T> void getList(String cql, Set<T>... lists) {
         //用于给每个Set list赋值
@@ -76,10 +78,11 @@ public class Neo4jUtil {
 
     /**
      * cql 路径查询 返回节点和关系
-     * @param cql 查询语句
+     *
+     * @param cql      查询语句
      * @param nodeList 节点
      * @param edgeList 关系
-     * @return List<Map<String,Object>>
+     * @return List<Map < String, Object>>
      */
     public static <T> void getPathList(String cql, Set<T> nodeList, Set<T> edgeList) {
         try {
@@ -121,8 +124,9 @@ public class Neo4jUtil {
 
     /**
      * cql 返回具体的属性, 如match (n)-[]-() return n.id,n.name，match (n)-[]-() return count(n)
+     *
      * @param cql 查询语句
-     * @return List<Map<String,Object>>
+     * @return List<Map < String, Object>>
      */
     public static List<Map<String, Object>> getFields(String cql) {
         List<Map<String, Object>> resList = new ArrayList<>();
@@ -139,14 +143,47 @@ public class Neo4jUtil {
         return resList;
     }
 
+
+    /**
+     * cql的return返回多种节点match (n)-[edge]-(n) return n,m,edge：限定返回关系时，关系的别名必须“包含”edge
+     *
+     * @param cql   查询语句
+     * @param lists 和cql的return返回节点顺序对应
+     * @return List<Map < String, Object>>
+     */
+    public static List<String> getAllNodeIds(String cql) {
+
+        List<String> idList = new ArrayList<>();
+        try {
+            Session session = driver.session();
+            Result result = session.run(cql);
+            List<Record> list = result.list();
+
+            for (int i = 0; i < list.size(); i++) {
+                List<Value> values = list.get(i).values();
+                for (int j = 0; j < values.size(); j++) {
+                    Iterable<Value> valueList = values.get(j).values();
+                    valueList.forEach(value -> {
+                        Node node = value.asNode();
+                        idList.add(String.valueOf(node.id()));
+                    });
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return idList.stream().distinct().collect(Collectors.toList());
+    }
+
+
     /**
      * 执行添加cql
+     *
      * @param cql 查询语句
      */
     public static void add(String cql) {
         //启动事务
-        try (Session session = driver.session();
-             Transaction tx = session.beginTransaction()) {
+        try (Session session = driver.session(); Transaction tx = session.beginTransaction()) {
             tx.run(cql);
             //提交事务
             tx.commit();
