@@ -73,6 +73,11 @@
 
 
         $('#btn').bind('click', function () {
+            var serviceName = $('#serverId').val();
+            if (serviceName == null || serviceName != undefined || serviceName == "") {
+               alert("输入服务名称查询")
+                window.location.reload()
+            }
             init();
             //修改初始缩放
             network.moveTo({scale: 0.8});
