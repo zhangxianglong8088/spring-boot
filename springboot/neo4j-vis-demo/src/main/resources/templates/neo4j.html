@@ -73,8 +73,7 @@
 
 
         $('#btn').bind('click', function () {
-            var serviceName = $('#serverId').val();
-            if (serviceName == null || serviceName != undefined || serviceName == "") {
+            if ($("#serverId").val() == "") {
                alert("输入服务名称查询")
                 window.location.reload()
             }
