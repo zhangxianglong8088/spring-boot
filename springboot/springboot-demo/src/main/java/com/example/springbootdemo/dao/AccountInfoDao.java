@@ -10,4 +10,7 @@ import com.example.springbootdemo.dao.domain.AccountInfo;
 public interface AccountInfoDao {
 
     AccountInfo getbyProjectId(Integer projectId);
+
+
+    void save(AccountInfo accountInfo);
 }

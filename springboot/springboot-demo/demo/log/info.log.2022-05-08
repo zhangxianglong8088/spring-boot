@@ -1,0 +1,2 @@
+2022-05-08-08-49 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 654821264
+2022-05-08-08-49 [SpringApplicationShutdownHook] [org.neo4j.driver.ConnectionPool] [INFO] - Closing connection pool towards localhost:7687

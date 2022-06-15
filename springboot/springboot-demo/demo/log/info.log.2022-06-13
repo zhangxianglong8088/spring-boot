@@ -1,0 +1,106 @@
+2022-06-13-16-37 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 30336 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-06-13-16-37 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-06-13-16-37 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-06-13-16-37 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-06-13-16-37 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 11 ms. Found 0 Neo4j repository interfaces.
+2022-06-13-16-37 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-06-13-16-37 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-06-13-16-37 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 3 ms. Found 0 Neo4j repository interfaces.
+2022-06-13-16-37 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-06-13-16-37 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-06-13-16-37 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2022-06-13-16-37 [main] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [INFO] - Bean 'customizeAsyncConfigurer' of type [com.example.springbootdemo.config.CustomizeAsyncConfigurer$$EnhancerBySpringCGLIB$$5de3722d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-13-16-37 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-06-13-16-37 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 2064 ms
+2022-06-13-16-37 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-06-13-16-37 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-06-13-16-37 [main] [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] [WARN] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'spiTestController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.example.springbootdemo.service.spi.TestSpiService' available: expected single matching bean but found 2: testASpiServieImpl,testBSpiServieImpl
+2022-06-13-16-37 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closing ...
+2022-06-13-16-37 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+2022-06-13-16-37 [main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] [INFO] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-13-16-37 [main] [org.springframework.boot.SpringApplication] [ERROR] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'spiTestController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.example.springbootdemo.service.spi.TestSpiService' available: expected single matching bean but found 2: testASpiServieImpl,testBSpiServieImpl
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:765)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.springbootdemo.SpringbootDemoApplication.main(SpringbootDemoApplication.java:18)
+Caused by: org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.example.springbootdemo.service.spi.TestSpiService' available: expected single matching bean but found 2: testASpiServieImpl,testBSpiServieImpl
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveNotUnique(DependencyDescriptor.java:220)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1358)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 17 more
+2022-06-13-16-38 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 30358 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-06-13-16-38 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-06-13-16-38 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-06-13-16-38 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-06-13-16-38 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 11 ms. Found 0 Neo4j repository interfaces.
+2022-06-13-16-38 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-06-13-16-38 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-06-13-16-38 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 3 ms. Found 0 Neo4j repository interfaces.
+2022-06-13-16-38 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-06-13-16-38 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-06-13-16-38 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2022-06-13-16-38 [main] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [INFO] - Bean 'customizeAsyncConfigurer' of type [com.example.springbootdemo.config.CustomizeAsyncConfigurer$$EnhancerBySpringCGLIB$$65afcd7c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-13-16-38 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-06-13-16-38 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 2055 ms
+2022-06-13-16-38 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-06-13-16-38 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-06-13-16-38 [main] [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] [WARN] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'spiTestController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.example.springbootdemo.service.spi.TestSpiService' available: expected single matching bean but found 2: testASpiServieImpl,testBSpiServieImpl
+2022-06-13-16-38 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closing ...
+2022-06-13-16-38 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+2022-06-13-16-38 [main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] [INFO] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-13-16-38 [main] [org.springframework.boot.SpringApplication] [ERROR] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'spiTestController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.example.springbootdemo.service.spi.TestSpiService' available: expected single matching bean but found 2: testASpiServieImpl,testBSpiServieImpl
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:765)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.springbootdemo.SpringbootDemoApplication.main(SpringbootDemoApplication.java:18)
+Caused by: org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.example.springbootdemo.service.spi.TestSpiService' available: expected single matching bean but found 2: testASpiServieImpl,testBSpiServieImpl
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveNotUnique(DependencyDescriptor.java:220)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1358)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1300)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
+	... 17 more

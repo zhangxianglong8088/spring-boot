@@ -23,4 +23,10 @@ public class AccountInforDaoImpl implements AccountInfoDao {
     public AccountInfo getbyProjectId(Integer id) {
         return projectMapper.selectByPrimaryKey(id);
     }
+
+    @Override
+    public void save(AccountInfo accountInfo) {
+        projectMapper.insertSelective(accountInfo);
+//        int a = 1 / 0; //主动抛出异常，观察数据是否回滚
+    }
 }

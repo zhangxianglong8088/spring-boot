@@ -10,4 +10,8 @@ import com.example.springbootdemo.dao.domain.AccountInfo;
 public interface AccountingInfoService {
 
     AccountInfo getById(Integer id);
+
+    void saveNoTranstianl(AccountInfo accountInfo);
+
+    void save(AccountInfo accountInfo);
 }

@@ -1,7 +1,9 @@
 package com.example.springbootdemo.web;
 
+import com.example.springbootdemo.dao.AccountInfoDao;
 import com.example.springbootdemo.dao.domain.AccountInfo;
 import com.example.springbootdemo.dao.mapper.AccountInfoMapper;
+import com.example.springbootdemo.service.AccountingInfoService;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.math.BigDecimal;
 
 /**
  * @description：
@@ -22,6 +25,8 @@ public class UserController {
 
     @Resource
     private AccountInfoMapper accountInfoMapper;
+    @Resource
+    private AccountingInfoService accountingInfoService;
 
     @Value("${name}")
     private String name;
@@ -37,9 +42,10 @@ public class UserController {
         return "test";
     }
 
-    @PostMapping("hello")
+    @GetMapping("hello")
     public String hello() {
         System.out.println(name);
+        int i = 1 / 0;
         return "hello";
     }
 
@@ -47,5 +53,19 @@ public class UserController {
     public String accounting() {
         AccountInfo accountingProject = accountInfoMapper.selectByPrimaryKey(1);
         return "hello";
+    }
+
+    /**
+     * 测试Spring事物
+     */
+    @GetMapping("save")
+    public void save() {
+
+        AccountInfo accountInfo = new AccountInfo();
+        accountInfo.setAccountId("123L");
+        accountInfo.setUserId(123L);
+        accountInfo.setAccountBalance(BigDecimal.ONE);
+        accountingInfoService.save(accountInfo);
+
     }
 }

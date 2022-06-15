@@ -1,0 +1,40 @@
+2022-03-10-10-05 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 36747 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-03-10-10-05 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-03-10-10-05 [main] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [INFO] - Bean 'customizeAsyncConfigurer' of type [com.example.springbootdemo.config.CustomizeAsyncConfigurer$$EnhancerBySpringCGLIB$$daf2a5d0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-03-10-10-05 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-03-10-10-05 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-03-10-10-05 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 2.467 seconds (JVM running for 3.18)
+2022-03-10-10-05 [SpringApplicationShutdownHook] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closing ...
+2022-03-10-10-05 [SpringApplicationShutdownHook] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+2022-03-10-10-05 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 36874 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-03-10-10-05 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-03-10-10-05 [main] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [INFO] - Bean 'customizeAsyncConfigurer' of type [com.example.springbootdemo.config.CustomizeAsyncConfigurer$$EnhancerBySpringCGLIB$$daf2a5d0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-03-10-10-05 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-03-10-10-05 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-03-10-10-05 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 1.966 seconds (JVM running for 2.65)
+2022-03-10-10-05 [SpringApplicationShutdownHook] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closing ...
+2022-03-10-10-05 [SpringApplicationShutdownHook] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+2022-03-10-10-07 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 37099 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-03-10-10-07 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-03-10-10-07 [main] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [INFO] - Bean 'customizeAsyncConfigurer' of type [com.example.springbootdemo.config.CustomizeAsyncConfigurer$$EnhancerBySpringCGLIB$$b2f7a49a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-03-10-10-07 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-03-10-10-07 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-03-10-10-07 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 1.934 seconds (JVM running for 2.583)
+2022-03-10-10-07 [SpringApplicationShutdownHook] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closing ...
+2022-03-10-10-07 [SpringApplicationShutdownHook] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+2022-03-10-10-08 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 37196 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-03-10-10-08 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-03-10-10-08 [main] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [INFO] - Bean 'customizeAsyncConfigurer' of type [com.example.springbootdemo.config.CustomizeAsyncConfigurer$$EnhancerBySpringCGLIB$$b2f7a49a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-03-10-10-08 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-03-10-10-08 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-03-10-10-08 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 2.008 seconds (JVM running for 2.627)
+2022-03-10-10-08 [SpringApplicationShutdownHook] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closing ...
+2022-03-10-10-08 [SpringApplicationShutdownHook] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
+2022-03-10-10-09 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 37377 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-03-10-10-09 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-03-10-10-09 [main] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [INFO] - Bean 'customizeAsyncConfigurer' of type [com.example.springbootdemo.config.CustomizeAsyncConfigurer$$EnhancerBySpringCGLIB$$d7d92467] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-03-10-10-09 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-03-10-10-09 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-03-10-10-09 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 1.938 seconds (JVM running for 2.563)
+2022-03-10-10-09 [SpringApplicationShutdownHook] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closing ...
+2022-03-10-10-09 [SpringApplicationShutdownHook] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed

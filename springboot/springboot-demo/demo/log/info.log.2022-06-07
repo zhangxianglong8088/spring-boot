@@ -1,0 +1,322 @@
+2022-06-07-18-22 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 47479 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-06-07-18-22 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-06-07-18-22 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-06-07-18-22 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 8 ms. Found 0 Neo4j repository interfaces.
+2022-06-07-18-22 [main] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [INFO] - Bean 'customizeAsyncConfigurer' of type [com.example.springbootdemo.config.CustomizeAsyncConfigurer$$EnhancerBySpringCGLIB$$54efcf7f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-07-18-22 [main] [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] [WARN] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'objectMapperConfigurer' defined in class path resource [springfox/documentation/spring/web/SpringfoxWebMvcConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error at ::0 formal unbound in pointcut 
+2022-06-07-18-22 [main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] [INFO] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-07-18-22 [main] [org.springframework.boot.SpringApplication] [ERROR] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'objectMapperConfigurer' defined in class path resource [springfox/documentation/spring/web/SpringfoxWebMvcConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error at ::0 formal unbound in pointcut 
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:270)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:762)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:567)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:765)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.springbootdemo.SpringbootDemoApplication.main(SpringbootDemoApplication.java:16)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error at ::0 formal unbound in pointcut 
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:410)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:111)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:253)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	... 14 more
+Caused by: java.lang.IllegalArgumentException: error at ::0 formal unbound in pointcut 
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:226)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:289)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:321)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:128)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:97)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:78)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:339)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:291)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	... 36 more
+2022-06-07-18-23 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 47693 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-06-07-18-23 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-06-07-18-23 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-06-07-18-23 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 8 ms. Found 0 Neo4j repository interfaces.
+2022-06-07-18-23 [main] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [INFO] - Bean 'customizeAsyncConfigurer' of type [com.example.springbootdemo.config.CustomizeAsyncConfigurer$$EnhancerBySpringCGLIB$$24d28d1f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-07-18-23 [main] [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] [WARN] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'objectMapperConfigurer' defined in class path resource [springfox/documentation/spring/web/SpringfoxWebMvcConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error at ::0 formal unbound in pointcut 
+2022-06-07-18-23 [main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] [INFO] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-07-18-23 [main] [org.springframework.boot.SpringApplication] [ERROR] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'objectMapperConfigurer' defined in class path resource [springfox/documentation/spring/web/SpringfoxWebMvcConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error at ::0 formal unbound in pointcut 
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:270)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:762)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:567)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:765)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.springbootdemo.SpringbootDemoApplication.main(SpringbootDemoApplication.java:16)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error at ::0 formal unbound in pointcut 
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:410)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:111)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:253)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	... 14 more
+Caused by: java.lang.IllegalArgumentException: error at ::0 formal unbound in pointcut 
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:226)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:289)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:321)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:128)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:97)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:78)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:339)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:291)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	... 36 more
+2022-06-07-18-23 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 47782 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-06-07-18-23 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-06-07-18-23 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-06-07-18-23 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 8 ms. Found 0 Neo4j repository interfaces.
+2022-06-07-18-23 [main] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [INFO] - Bean 'customizeAsyncConfigurer' of type [com.example.springbootdemo.config.CustomizeAsyncConfigurer$$EnhancerBySpringCGLIB$$c378c904] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-07-18-23 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-06-07-18-23 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1454 ms
+2022-06-07-18-23 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-06-07-18-23 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-06-07-18-23 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-06-07-18-23 [main] [org.neo4j.driver.Driver] [INFO] - Direct driver instance 1111700510 created for server address localhost:7687
+2022-06-07-18-23 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-07-18-23 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+2022-06-07-18-23 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+2022-06-07-18-23 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+2022-06-07-18-23 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 3.7 seconds (JVM running for 4.448)
+2022-06-07-18-24 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 1111700510
+2022-06-07-18-24 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 47823 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-06-07-18-24 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-06-07-18-24 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-06-07-18-24 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 9 ms. Found 0 Neo4j repository interfaces.
+2022-06-07-18-24 [main] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [INFO] - Bean 'customizeAsyncConfigurer' of type [com.example.springbootdemo.config.CustomizeAsyncConfigurer$$EnhancerBySpringCGLIB$$1d0ff470] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-07-18-24 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-06-07-18-24 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1558 ms
+2022-06-07-18-24 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-06-07-18-24 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-06-07-18-24 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-06-07-18-24 [main] [org.neo4j.driver.Driver] [INFO] - Direct driver instance 2045895214 created for server address localhost:7687
+2022-06-07-18-24 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-07-18-24 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+2022-06-07-18-24 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+2022-06-07-18-24 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+2022-06-07-18-24 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 3.677 seconds (JVM running for 4.418)
+2022-06-07-18-24 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 2045895214
+2022-06-07-18-24 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 47885 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-06-07-18-24 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-06-07-18-24 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-06-07-18-24 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 10 ms. Found 0 Neo4j repository interfaces.
+2022-06-07-18-24 [main] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [INFO] - Bean 'customizeAsyncConfigurer' of type [com.example.springbootdemo.config.CustomizeAsyncConfigurer$$EnhancerBySpringCGLIB$$75dc7973] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-07-18-24 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-06-07-18-24 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1513 ms
+2022-06-07-18-24 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-06-07-18-24 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-06-07-18-24 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-06-07-18-24 [main] [org.neo4j.driver.Driver] [INFO] - Direct driver instance 125530569 created for server address localhost:7687
+2022-06-07-18-24 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-07-18-24 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+2022-06-07-18-24 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+2022-06-07-18-24 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+2022-06-07-18-24 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 3.626 seconds (JVM running for 4.355)
+2022-06-07-18-24 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 125530569
+2022-06-07-18-24 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 47944 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-06-07-18-24 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-06-07-18-24 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-06-07-18-24 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 9 ms. Found 0 Neo4j repository interfaces.
+2022-06-07-18-24 [main] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [INFO] - Bean 'customizeAsyncConfigurer' of type [com.example.springbootdemo.config.CustomizeAsyncConfigurer$$EnhancerBySpringCGLIB$$ab1e3c33] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-07-18-24 [main] [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] [WARN] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'objectMapperConfigurer' defined in class path resource [springfox/documentation/spring/web/SpringfoxWebMvcConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error at ::0 formal unbound in pointcut 
+2022-06-07-18-24 [main] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] [INFO] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-07-18-24 [main] [org.springframework.boot.SpringApplication] [ERROR] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'objectMapperConfigurer' defined in class path resource [springfox/documentation/spring/web/SpringfoxWebMvcConfiguration.class]: BeanPostProcessor before instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error at ::0 formal unbound in pointcut 
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:270)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:762)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:567)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:765)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.example.springbootdemo.SpringbootDemoApplication.main(SpringbootDemoApplication.java:16)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: error at ::0 formal unbound in pointcut 
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:410)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:111)
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92)
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:253)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	... 14 more
+Caused by: java.lang.IllegalArgumentException: error at ::0 formal unbound in pointcut 
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:227)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:198)
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:177)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:226)
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:289)
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:321)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:128)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:97)
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:78)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:339)
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:291)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	... 36 more
+2022-06-07-18-25 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 48065 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-06-07-18-25 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-06-07-18-25 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-06-07-18-25 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 9 ms. Found 0 Neo4j repository interfaces.
+2022-06-07-18-25 [main] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [INFO] - Bean 'customizeAsyncConfigurer' of type [com.example.springbootdemo.config.CustomizeAsyncConfigurer$$EnhancerBySpringCGLIB$$75dc7973] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-07-18-25 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-06-07-18-25 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1459 ms
+2022-06-07-18-25 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-06-07-18-25 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-06-07-18-25 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-06-07-18-25 [main] [org.neo4j.driver.Driver] [INFO] - Direct driver instance 1959219756 created for server address localhost:7687
+2022-06-07-18-25 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-07-18-25 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+2022-06-07-18-25 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+2022-06-07-18-25 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+2022-06-07-18-25 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 3.582 seconds (JVM running for 4.296)
+2022-06-07-18-25 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+2022-06-07-18-25 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 1 ms
+2022-06-07-18-25 [http-nio-8080-exec-1] [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver] [WARN] - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2022-06-07-18-26 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 1959219756
+2022-06-07-18-26 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 48199 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-06-07-18-26 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-06-07-18-26 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-06-07-18-26 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 8 ms. Found 0 Neo4j repository interfaces.
+2022-06-07-18-26 [main] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [INFO] - Bean 'customizeAsyncConfigurer' of type [com.example.springbootdemo.config.CustomizeAsyncConfigurer$$EnhancerBySpringCGLIB$$66d84e37] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-07-18-26 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-06-07-18-26 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1346 ms
+2022-06-07-18-26 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-06-07-18-26 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-06-07-18-26 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-06-07-18-26 [main] [org.neo4j.driver.Driver] [INFO] - Direct driver instance 1739581705 created for server address localhost:7687
+2022-06-07-18-26 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-07-18-26 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+2022-06-07-18-26 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+2022-06-07-18-26 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+2022-06-07-18-26 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 3.269 seconds (JVM running for 3.924)
+2022-06-07-18-26 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+2022-06-07-18-26 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 1 ms
+2022-06-07-18-26 [http-nio-8080-exec-1] [com.example.springbootdemo.config.LogAspect] [INFO] - 环绕通知的前置通知
+2022-06-07-18-26 [http-nio-8080-exec-1] [com.example.springbootdemo.config.LogAspect] [INFO] - 前置通知
+2022-06-07-18-26 [http-nio-8080-exec-1] [com.example.springbootdemo.config.LogAspect] [INFO] - 后置通知
+2022-06-07-18-26 [http-nio-8080-exec-1] [com.example.springbootdemo.config.LogAspect] [INFO] - 环绕通知的后置通知
+2022-06-07-18-27 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 1739581705
+2022-06-07-18-27 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on bogon with PID 48328 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-06-07-18-27 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-06-07-18-27 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-06-07-18-27 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 10 ms. Found 0 Neo4j repository interfaces.
+2022-06-07-18-27 [main] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [INFO] - Bean 'customizeAsyncConfigurer' of type [com.example.springbootdemo.config.CustomizeAsyncConfigurer$$EnhancerBySpringCGLIB$$8b2f1cc7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-07-18-27 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-06-07-18-27 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 1532 ms
+2022-06-07-18-27 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-06-07-18-27 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-06-07-18-27 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-06-07-18-27 [main] [org.neo4j.driver.Driver] [INFO] - Direct driver instance 2049602706 created for server address localhost:7687
+2022-06-07-18-27 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-07-18-27 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+2022-06-07-18-27 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+2022-06-07-18-27 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+2022-06-07-18-27 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 3.676 seconds (JVM running for 4.53)
+2022-06-07-18-27 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+2022-06-07-18-27 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 1 ms
+2022-06-07-18-27 [http-nio-8080-exec-1] [com.example.springbootdemo.config.LogAspect] [INFO] - 环绕通知的前置通知
+2022-06-07-18-27 [http-nio-8080-exec-1] [com.example.springbootdemo.config.LogAspect] [INFO] - 前置通知
+2022-06-07-18-27 [http-nio-8080-exec-1] [com.example.springbootdemo.config.LogAspect] [INFO] - 【Aspect 异常通知】开始执行
+2022-06-07-18-27 [http-nio-8080-exec-1] [com.example.springbootdemo.config.LogAspect] [INFO] - 出现异常/ by zero
+2022-06-07-18-27 [http-nio-8080-exec-1] [com.example.springbootdemo.config.LogAspect] [INFO] - 【Aspect 异常通知】完成执行
+2022-06-07-18-27 [http-nio-8080-exec-1] [com.example.springbootdemo.config.LogAspect] [INFO] - 后置通知
