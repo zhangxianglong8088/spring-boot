@@ -174,3 +174,36 @@ Consider defining a bean of type 'com.example.springbootdemo.service.spi.TestSpi
 2022-06-15-16-29 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
 2022-06-15-16-29 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 1 ms
 2022-06-15-16-29 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 2021979938
+2022-06-15-17-37 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Starting SpringbootDemoApplication using Java 1.8.0_191 on 192.168.0.102 with PID 25531 (/Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo/target/classes started by zhangxianglong in /Users/zhangxianglong/IdeaProjects/zhangxianglong/spring/springboot/springboot-demo)
+2022-06-15-17-37 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - The following profiles are active: dev
+2022-06-15-17-37 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-06-15-17-37 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-06-15-17-37 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 12 ms. Found 0 Neo4j repository interfaces.
+2022-06-15-17-37 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-06-15-17-37 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Neo4j repositories in DEFAULT mode.
+2022-06-15-17-37 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 5 ms. Found 0 Neo4j repository interfaces.
+2022-06-15-17-37 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-06-15-17-37 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-06-15-17-37 [main] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO] - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2022-06-15-17-37 [main] [org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [INFO] - Bean 'customizeAsyncConfigurer' of type [com.example.springbootdemo.config.CustomizeAsyncConfigurer$$EnhancerBySpringCGLIB$$6776988d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-15-17-37 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat initialized with port(s): 8080 (http)
+2022-06-15-17-37 [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO] - Root WebApplicationContext: initialization completed in 2263 ms
+2022-06-15-17-37 [main] [com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure] [INFO] - Init DruidDataSource
+2022-06-15-17-37 [main] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} inited
+2022-06-15-17-37 [main] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [INFO] - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-06-15-17-37 [main] [org.neo4j.driver.Driver] [INFO] - Direct driver instance 1319921115 created for server address localhost:7687
+2022-06-15-17-37 [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO] - Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-15-17-37 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Context refreshed
+2022-06-15-17-37 [main] [springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [INFO] - Found 1 custom documentation plugin(s)
+2022-06-15-17-37 [main] [springfox.documentation.spring.web.scanners.ApiListingReferenceScanner] [INFO] - Scanning for api listing references
+2022-06-15-17-37 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: testUsingGET_1
+2022-06-15-17-37 [main] [springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator] [INFO] - Generating unique operation named: testUsingGET_2
+2022-06-15-17-37 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 5.542 seconds (JVM running for 6.224)
+2022-06-15-17-37 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
+2022-06-15-17-37 [http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 1 ms
+2022-06-15-17-37 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 1319921115
+2022-06-15-20-42 [main] [com.example.springbootdemo.service.state.Client] [INFO] - 第二版代码：基于状态模式
+2022-06-15-20-42 [main] [com.example.springbootdemo.service.state.Client] [INFO] - 测试支付方法pay()
+2022-06-15-20-42 [main] [com.example.springbootdemo.service.state.UnpaidOrderStateService] [INFO] - 支付成功
+2022-06-15-20-42 [main] [com.example.springbootdemo.service.state.OrderService] [INFO] - 订单状态：由未支付转变为已支付
+2022-06-15-20-42 [main] [com.example.springbootdemo.service.state.AbstractOrderStateService] [INFO] - 订单状态：已支付,无法支付
