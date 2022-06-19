@@ -1,4 +1,25 @@
-2022-06-15-16-26 [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] [ERROR] - 
+2022-06-19-19-53 [main-EventThread] [org.apache.zookeeper.ClientCnxn] [ERROR] - Error while calling watcher 
+java.lang.NullPointerException
+	at com.example.springbootdemo.ZookeeperWatcher.process(ZookeeperWatcher.java:35)
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:530)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:505)
+2022-06-19-19-53 [main-EventThread] [org.apache.zookeeper.ClientCnxn] [ERROR] - Error while calling watcher 
+java.lang.NullPointerException
+	at com.example.springbootdemo.ZookeeperWatcher.process(ZookeeperWatcher.java:35)
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:530)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:505)
+2022-06-19-19-54 [main-EventThread] [org.apache.zookeeper.ClientCnxn] [ERROR] - Error while calling watcher 
+java.lang.NullPointerException
+	at com.example.springbootdemo.ZookeeperWatcher.process(ZookeeperWatcher.java:38)
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:530)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:505)
+2022-06-19-19-56 [main-EventThread] [org.apache.zookeeper.ClientCnxn] [ERROR] - Error while calling watcher 
+java.lang.NullPointerException
+	at com.example.springbootdemo.config.FactoryBean.getBean(FactoryBean.java:32)
+	at com.example.springbootdemo.ZookeeperWatcher.process(ZookeeperWatcher.java:33)
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:530)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:505)
+2022-06-19-19-56 [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] [ERROR] - 
 
 ***************************
 APPLICATION FAILED TO START
@@ -6,14 +27,19 @@ APPLICATION FAILED TO START
 
 Description:
 
-A component required a bean of type 'com.example.springbootdemo.service.spi.TestSpiService' that could not be found.
-
+Web server failed to start. Port 8080 was already in use.
 
 Action:
 
-Consider defining a bean of type 'com.example.springbootdemo.service.spi.TestSpiService' in your configuration.
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
 
-2022-06-15-16-27 [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] [ERROR] - 
+2022-06-19-19-57 [main-EventThread] [org.apache.zookeeper.ClientCnxn] [ERROR] - Error while calling watcher 
+java.lang.NullPointerException
+	at com.example.springbootdemo.config.FactoryBean.getBean(FactoryBean.java:32)
+	at com.example.springbootdemo.ZookeeperWatcher.process(ZookeeperWatcher.java:33)
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:530)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:505)
+2022-06-19-19-59 [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] [ERROR] - 
 
 ***************************
 APPLICATION FAILED TO START
@@ -21,14 +47,19 @@ APPLICATION FAILED TO START
 
 Description:
 
-A component required a bean of type 'com.example.springbootdemo.service.spi.TestSpiService' that could not be found.
+A component required a bean of type 'org.apache.zookeeper.ZooKeeper' that could not be found.
 
 
 Action:
 
-Consider defining a bean of type 'com.example.springbootdemo.service.spi.TestSpiService' in your configuration.
+Consider defining a bean of type 'org.apache.zookeeper.ZooKeeper' in your configuration.
 
-2022-06-15-16-28 [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] [ERROR] - 
+2022-06-19-20-01 [main-EventThread] [org.apache.zookeeper.ClientCnxn] [ERROR] - Error while calling watcher 
+java.lang.NullPointerException
+	at com.example.springbootdemo.ZookeeperWatcher.process(ZookeeperWatcher.java:34)
+	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:530)
+	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:505)
+2022-06-19-20-05 [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] [ERROR] - 
 
 ***************************
 APPLICATION FAILED TO START
@@ -36,14 +67,14 @@ APPLICATION FAILED TO START
 
 Description:
 
-A component required a bean of type 'com.example.springbootdemo.service.spi.TestSpiService' that could not be found.
+A component required a bean of type 'org.apache.zookeeper.ZooKeeper' that could not be found.
 
 
 Action:
 
-Consider defining a bean of type 'com.example.springbootdemo.service.spi.TestSpiService' in your configuration.
+Consider defining a bean of type 'org.apache.zookeeper.ZooKeeper' in your configuration.
 
-2022-06-15-16-28 [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] [ERROR] - 
+2022-06-19-20-06 [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] [ERROR] - 
 
 ***************************
 APPLICATION FAILED TO START
@@ -51,10 +82,66 @@ APPLICATION FAILED TO START
 
 Description:
 
-A component required a bean of type 'com.example.springbootdemo.service.spi.TestSpiService' that could not be found.
+A component required a bean of type 'org.apache.zookeeper.ZooKeeper' that could not be found.
 
 
 Action:
 
-Consider defining a bean of type 'com.example.springbootdemo.service.spi.TestSpiService' in your configuration.
+Consider defining a bean of type 'org.apache.zookeeper.ZooKeeper' in your configuration.
+
+2022-06-19-20-18 [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] [ERROR] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2022-06-19-20-19 [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] [ERROR] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2022-06-19-20-21 [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] [ERROR] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2022-06-19-20-22 [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] [ERROR] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
 

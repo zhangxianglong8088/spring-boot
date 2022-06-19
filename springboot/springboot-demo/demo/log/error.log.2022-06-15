@@ -1,0 +1,60 @@
+2022-06-15-16-26 [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] [ERROR] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'com.example.springbootdemo.service.spi.TestSpiService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.springbootdemo.service.spi.TestSpiService' in your configuration.
+
+2022-06-15-16-27 [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] [ERROR] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'com.example.springbootdemo.service.spi.TestSpiService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.springbootdemo.service.spi.TestSpiService' in your configuration.
+
+2022-06-15-16-28 [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] [ERROR] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'com.example.springbootdemo.service.spi.TestSpiService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.springbootdemo.service.spi.TestSpiService' in your configuration.
+
+2022-06-15-16-28 [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] [ERROR] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'com.example.springbootdemo.service.spi.TestSpiService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.springbootdemo.service.spi.TestSpiService' in your configuration.
+
