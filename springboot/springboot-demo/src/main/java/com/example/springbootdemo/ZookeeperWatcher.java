@@ -1,15 +1,13 @@
 package com.example.springbootdemo;
 
-import com.example.springbootdemo.web.SeckillController;
 import lombok.SneakyThrows;
-import org.apache.zookeeper.*;
+import org.apache.zookeeper.WatchedEvent;
+import org.apache.zookeeper.Watcher;
+import org.apache.zookeeper.ZooKeeper;
 import org.apache.zookeeper.data.Stat;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
-
-import javax.annotation.Resource;
 
 import static com.example.springbootdemo.web.SeckillController.productSoldOutMap;
 

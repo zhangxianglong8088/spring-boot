@@ -2651,3 +2651,8 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2022-06-19-20-52 [main] [com.example.springbootdemo.SpringbootDemoApplication] [INFO] - Started SpringbootDemoApplication in 7.396 seconds (JVM running for 8.197)
 2022-06-19-20-52 [http-nio-8090-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Initializing Servlet 'dispatcherServlet'
 2022-06-19-20-52 [http-nio-8090-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - Completed initialization in 2 ms
+2022-06-19-20-53 [SpringApplicationShutdownHook] [org.neo4j.driver.Driver] [INFO] - Closing driver instance 2036508486
+2022-06-19-20-53 [SpringApplicationShutdownHook] [org.apache.zookeeper.ZooKeeper] [INFO] - Session: 0x10001ca459300ec closed
+2022-06-19-20-53 [main-EventThread] [org.apache.zookeeper.ClientCnxn] [INFO] - EventThread shut down for session: 0x10001ca459300ec
+2022-06-19-20-53 [SpringApplicationShutdownHook] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closing ...
+2022-06-19-20-53 [SpringApplicationShutdownHook] [com.alibaba.druid.pool.DruidDataSource] [INFO] - {dataSource-1} closed
