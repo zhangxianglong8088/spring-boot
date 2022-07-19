@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import java.util.concurrent.ConcurrentHashMap;
 
+import static org.apache.zookeeper.ZooDefs.Ids.OPEN_ACL_UNSAFE;
+
 /**
  * @description：
  * @author: zhangxianglong
@@ -25,11 +27,12 @@ import java.util.concurrent.ConcurrentHashMap;
 @RestController
 @Slf4j
 public class SeckillController {
+
     /**
      * jvm 级别缓存 存在分布式环境问题
      */
 
-    public static ConcurrentHashMap<Integer, Boolean> productSoldOutMap = new ConcurrentHashMap<>();
+    public static ConcurrentHashMap<String, Boolean> productSoldOutMap = new ConcurrentHashMap<>();
 
     String REDIS_PRODUCT_STOCK_PREFIX = "redis_product_stock_prefix";
 
@@ -37,7 +40,7 @@ public class SeckillController {
     private StringRedisTemplate stringRedisTemplate;
 
     @Resource
-    private ZooKeeper zooKeeper;
+    public ZooKeeper zooKeeper;
 
     @Resource
     private OrderService orderService;
@@ -47,21 +50,27 @@ public class SeckillController {
     @ApiOperation(value = "秒杀", notes = "")
     public String test(@PathVariable("productId") Integer productId) throws InterruptedException, KeeperException {
 
+        try {
+            zooKeeper.create("/zk_product_sold_out", null, OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL);
+        } catch (Exception e) {
+
+        }
+
         //redis库存已经扣减完成
-        if (productSoldOutMap.get(productId) != null) {
+        if (productSoldOutMap.get("zk_product_sold_out") != null) {
             return "商品已售罄";
         }
         Long stock = stringRedisTemplate.opsForValue().decrement(REDIS_PRODUCT_STOCK_PREFIX + productId);
-
-        productSoldOutMap.put(productId, true);
-        stringRedisTemplate.opsForValue().increment(REDIS_PRODUCT_STOCK_PREFIX + productId);
-
-        if (zooKeeper.exists("/zk_product_sold_out", true) == null) {
-            zooKeeper.create("/zk_product_sold_out", "".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
+        if (stock < 0) {
+            //redis库存扣减完成
+            //回填redis库存=0 避免出现负库存
+            stringRedisTemplate.opsForValue().increment(REDIS_PRODUCT_STOCK_PREFIX + productId);
+            //通知zookeeper
+            if (zooKeeper.exists("/zk_product_sold_out", true) != null) {
+                zooKeeper.setData("/zk_product_sold_out", "true".getBytes(), -1);
+            }
+            return "库存以售罄";
         }
-        //监听zk售完标记结点
-        zooKeeper.exists("/zk_product_sold_out", true);
-//        return "商品已售罄";
 
         try {
             orderService.seckill(productId);

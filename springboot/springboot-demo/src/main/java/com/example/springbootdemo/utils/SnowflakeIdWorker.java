@@ -1,234 +1,135 @@
 package com.example.springbootdemo.utils;
 
-import org.apache.commons.lang3.RandomUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.SystemUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.net.Inet4Address;
+import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 /**
  * @description：
  * @author: zhangxianglong
- * @date: 2022/3/18
+ * @date: 2022/3/21
  */
 public class SnowflakeIdWorker {
+	private final Logger logger = LoggerFactory.getLogger(SnowflakeIdWorker.class);
 
-    /**
-     * Twitter_Snowflake<br>
-     * SnowFlake的结构如下(每部分用-分开):<br>
-     * 0 - 0000000000 0000000000 0000000000 0000000000 0 - 00000 - 00000 - 000000000000 <br>
-     * 1位标识，由于long基本类型在Java中是带符号的，最高位是符号位，正数是0，负数是1，所以id一般是正数，最高位是0<br>
-     * 41位时间截(毫秒级)，注意，41位时间截不是存储当前时间的时间截，而是存储时间截的差值（当前时间截 - 开始时间截)
-     * 得到的值），这里的的开始时间截，一般是我们的id生成器开始使用的时间，由我们程序来指定的（如下下面程序IdWorker类的startTime属性）。41位的时间截，可以使用69年，年T = (1L << 41) / (1000L * 60 * 60 * 24 * 365) = 69<br>
-     * 10位的数据机器位，可以部署在1024个节点，包括5位datacenterId和5位workerId<br>
-     * 12位序列，毫秒内的计数，12位的计数顺序号支持每个节点每毫秒(同一机器，同一时间截)产生4096个ID序号<br>
-     * 加起来刚好64位，为一个Long型。<br>
-     * SnowFlake的优点是，整体上按照时间自增排序，并且整个分布式系统内不会产生ID碰撞(由数据中心ID和机器ID作区分)，并且效率较高，经测试，SnowFlake每秒能够产生26万ID左右。
-     */
+	private final static Long START_TIME_STAMP = 1561700251409L; // 开始时间戳 2019-06-28 13:37:31
 
-    // ==============================Fields===========================================
-    /**
-     * 开始时间截 (2015-01-01)
-     */
-    private final long twepoch = 1489111610226L;
+	private final static Long WORK_ID_BIT = 10L; // workid的范围是0~1023
 
-    /**
-     * 机器id所占的位数
-     */
-    private final long workerIdBits = 5L;
+	private final static Long SEQUENCE_BIT = 12L; // 序列号的范围是0~4095
 
-    /**
-     * 数据标识id所占的位数
-     */
-    private final long dataCenterIdBits = 5L;
+//    private final static Long MAX_WORK_ID_BIT = -1L ^ (-1L << WORK_ID_BIT); // 最大workid 二进制 1111111111
 
-    /**
-     * 支持的最大机器id，结果是31 (这个移位算法可以很快的计算出几位二进制数所能表示的最大十进制数)
-     */
-    private final long maxWorkerId = -1L ^ (-1L << workerIdBits);
+	private final static Long MAX_SEQUENCE_BIT = -1L ^ (-1L << SEQUENCE_BIT);// 最大序列号 二进制 111111111111
 
-    /**
-     * 支持的最大数据标识id，结果是31
-     */
-    private final long maxDataCenterId = -1L ^ (-1L << dataCenterIdBits);
+	private final static Long WORK_ID_LEFT_SHIFT = SEQUENCE_BIT;// workid左移12位
 
-    /**
-     * 序列在id中占的位数
-     */
-    private final long sequenceBits = 12L;
+	private final static Long TIME_STAMP_LEFT_SHIFT = SEQUENCE_BIT + WORK_ID_BIT;// 时间戳左移22位
 
-    /**
-     * 机器ID向左移12位
-     */
-    private final long workerIdShift = sequenceBits;
+	private long lastTimeStamp = -1L; // 上一次时间戳
+	private long sequence = 0L;// 序列号
+	private long workId;// 默认为ip
 
-    /**
-     * 数据标识id向左移17位(12+5)
-     */
-    private final long dataCenterIdShift = sequenceBits + workerIdBits;
+	public SnowflakeIdWorker() {
+		workId = getIpForWorkId();
 
-    /**
-     * 时间截向左移22位(5+5+12)
-     */
-    private final long timestampLeftShift = sequenceBits + workerIdBits + dataCenterIdBits;
+	}
 
-    /**
-     * 生成序列的掩码，这里为4095 (0b111111111111=0xfff=4095)
-     */
-    private final long sequenceMask = -1L ^ (-1L << sequenceBits);
+	/**
+	 * @return
+	 * @Description 获取分布式id
+	 * @Author Xue Yaowei
+	 * @Date 2018年6月12日 下午12:57:14
+	 */
+	public synchronized Long nextId() {
 
-    /**
-     * 工作机器ID(0~31)
-     */
-    private long workerId;
+		Long currentTimeStamp = getCurrentTimeStamp();
+		if (currentTimeStamp < lastTimeStamp) {
+			// 当前时间戳小于上次时间戳，发生了时间回拨
+			long offset = lastTimeStamp - currentTimeStamp;
+			if (offset < 5) {
+				try {
+					wait(offset << 1);// 等待2倍时间
+					currentTimeStamp = getCurrentTimeStamp();
+					if (currentTimeStamp < lastTimeStamp) {
+						// 还是小于，抛异常
+						throw new RuntimeException("发生时间回拨,拒绝生成id");
+					}
+				} catch (InterruptedException e) {
+					logger.error("获取当前时间戳出错", e);
+					Thread.currentThread().interrupt();
+				}
 
-    /**
-     * 数据中心ID(0~31)
-     */
-    private long dataCenterId;
+			} else {
+				throw new RuntimeException("时间回拨大于5ms,拒绝生成id");
+			}
+		}
 
-    /**
-     * 毫秒内序列(0~4095)
-     */
-    private long sequence = 0L;
+		if (currentTimeStamp == lastTimeStamp) {
+			// 相同毫秒内，序列号自增
+			sequence = (sequence + 1) & MAX_SEQUENCE_BIT;
+			if (sequence == 0L) {
+				// 相同毫秒内，序列号到大最大值
+				currentTimeStamp = getNextMillisecond(lastTimeStamp);// 当前时间戳移到下一毫秒
+			}
+		}
 
-    /**
-     * 上次生成ID的时间截
-     */
-    private long lastTimestamp = -1L;
+		if (currentTimeStamp > lastTimeStamp) {
+			// 当前时间戳大于上次时间戳
+			sequence = 0L;
+		}
 
-    private static SnowflakeIdWorker idWorker;
+		lastTimeStamp = currentTimeStamp;
 
-    static {
-        idWorker = new SnowflakeIdWorker(getWorkId(), getDataCenterId());
-    }
+		return ((currentTimeStamp - START_TIME_STAMP) << TIME_STAMP_LEFT_SHIFT) // 时间戳左移22位
+			| (workId << WORK_ID_LEFT_SHIFT) // workId左移12位
+			| sequence; // 序列号
+	}
 
-    //==============================Constructors=====================================
+	/**
+	 * @return
+	 * @Description 获取下一毫秒时间戳
+	 * @Author Xue Yaowei
+	 * @Date 2018年6月12日 下午4:08:11
+	 */
+	private long getNextMillisecond(Long lastTimeStamp) {
 
-    /**
-     * 构造函数
-     *
-     * @param workerId     工作ID (0~31)
-     * @param dataCenterId 数据中心ID (0~31)
-     */
-    public SnowflakeIdWorker(long workerId, long dataCenterId) {
-        if (workerId > maxWorkerId || workerId < 0) {
-            throw new IllegalArgumentException(String.format("workerId can't be greater than %d or less than 0", maxWorkerId));
-        }
-        if (dataCenterId > maxDataCenterId || dataCenterId < 0) {
-            throw new IllegalArgumentException(String.format("dataCenterId can't be greater than %d or less than 0", maxDataCenterId));
-        }
-        this.workerId = workerId;
-        this.dataCenterId = dataCenterId;
-    }
+		long currentTimeStamp = getCurrentTimeStamp();
+		while (currentTimeStamp <= lastTimeStamp) {
+			currentTimeStamp = getCurrentTimeStamp();
+		}
+		return currentTimeStamp;
+	}
 
-    // ==============================Methods==========================================
+	/**
+	 * @return
+	 * @Description 获取当前时间戳
+	 * @Author Xue Yaowei
+	 * @Date 2018年6月12日 下午3:34:32
+	 */
+	private Long getCurrentTimeStamp() {
+		return System.currentTimeMillis();
+	}
 
-    /**
-     * 获得下一个ID (该方法是线程安全的)
-     *
-     * @return SnowflakeId
-     */
-    public synchronized long nextId() {
-        long timestamp = timeGen();
+	/**
+	 * @return
+	 * @Description 把IP当做workid(只计算最后一个网段 ， 小于1023)
+	 * @Author Xue Yaowei
+	 * @Date 2018年6月12日 下午4:22:32
+	 */
+	// 有风险，如10.33.80.132 10.33.79.132 会生成相同的workId
+	private Long getIpForWorkId() {
+		try {
+			InetAddress addr = InetAddress.getLocalHost();
+			byte[] ipAddr = addr.getAddress();
+			StringBuilder ipAddrBuffer = new StringBuilder();
+			ipAddrBuffer.append(ipAddr[3] & 0xFF);
+			return Long.valueOf(ipAddrBuffer.toString()) & (~(-1 << 10));
+		} catch (UnknownHostException e) {
+			throw new RuntimeException(e);
+		}
+	}
 
-        //如果当前时间小于上一次ID生成的时间戳，说明系统时钟回退过这个时候应当抛出异常
-        if (timestamp < lastTimestamp) {
-            throw new RuntimeException(String.format("Clock moved backwards.  Refusing to generate id for %d milliseconds", lastTimestamp - timestamp));
-        }
-
-        //如果是同一时间生成的，则进行毫秒内序列
-        if (lastTimestamp == timestamp) {
-            sequence = (sequence + 1) & sequenceMask;
-            //毫秒内序列溢出
-            if (sequence == 0) {
-                //阻塞到下一个毫秒,获得新的时间戳
-                timestamp = tilNextMillis(lastTimestamp);
-            }
-        }
-        //时间戳改变，毫秒内序列重置
-        else {
-            sequence = 0L;
-        }
-
-        //上次生成ID的时间截
-        lastTimestamp = timestamp;
-
-        //移位并通过或运算拼到一起组成64位的ID
-        return ((timestamp - twepoch) << timestampLeftShift) | (dataCenterId << dataCenterIdShift) | (workerId << workerIdShift) | sequence;
-    }
-
-    /**
-     * 阻塞到下一个毫秒，直到获得新的时间戳
-     *
-     * @param lastTimestamp 上次生成ID的时间截
-     * @return 当前时间戳
-     */
-    protected long tilNextMillis(long lastTimestamp) {
-        long timestamp = timeGen();
-        while (timestamp <= lastTimestamp) {
-            timestamp = timeGen();
-        }
-        return timestamp;
-    }
-
-    /**
-     * 返回以毫秒为单位的当前时间
-     *
-     * @return 当前时间(毫秒)
-     */
-    protected long timeGen() {
-        return System.currentTimeMillis();
-    }
-
-    private static Long getWorkId() {
-        try {
-            String hostAddress = Inet4Address.getLocalHost().getHostAddress();
-            int[] ints = StringUtils.toCodePoints(hostAddress);
-            int sums = 0;
-            for (int b : ints) {
-                sums += b;
-            }
-            return (long) (sums % 32);
-        } catch (UnknownHostException e) {
-            // 如果获取失败，则使用随机数备用
-            return RandomUtils.nextLong(0, 31);
-        }
-    }
-
-    private static Long getDataCenterId() {
-        int[] ints = StringUtils.toCodePoints(SystemUtils.getHostName());
-        int sums = 0;
-        for (int i : ints) {
-            sums += i;
-        }
-        return (long) (sums % 32);
-    }
-
-
-    /**
-     * 静态工具类
-     *
-     * @return
-     */
-    public static synchronized Long generateId() {
-        long id = idWorker.nextId();
-        return id;
-    }
-
-    //==============================Test=============================================
-
-    /**
-     * 测试
-     */
-    public static void main(String[] args) {
-        System.out.println(System.currentTimeMillis());
-        long startTime = System.nanoTime();
-        for (int i = 0; i < 50000; i++) {
-            long id = SnowflakeIdWorker.generateId();
-            System.out.println(id);
-        }
-        System.out.println((System.nanoTime() - startTime) / 1000000 + "ms");
-    }
 }

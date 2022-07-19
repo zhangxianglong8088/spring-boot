@@ -1,4 +1,4 @@
-package com.example.springbootdemo.service.zk.wacch;
+package com.example.springbootdemo.service.zk.watcher;
 
 import org.apache.zookeeper.*;
 import org.apache.zookeeper.data.Stat;
@@ -47,7 +47,7 @@ public class WatcherExist implements Watcher {
 
         Stat stat = zooKeeper.exists(path, watcherDemo);
         if (stat == null) {
-            zooKeeper.create(path, "random".getBytes(), OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
+            String res = zooKeeper.create(path, "random".getBytes(), OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
         }
         if (stat != null) {
             zooKeeper.delete(path, stat.getVersion());

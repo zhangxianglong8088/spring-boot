@@ -29,7 +29,7 @@ public class ZookeeperWatcher implements Watcher, ApplicationContextAware {
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) {
-        this.applicationContext = applicationContext;
+        ZookeeperWatcher.applicationContext = applicationContext;
     }
 
     @SneakyThrows
@@ -45,7 +45,7 @@ public class ZookeeperWatcher implements Watcher, ApplicationContextAware {
 //                if (zooKeeper.exists("/zk_product_sold_out", false) == null) {
 //                    zooKeeper.create("/zk_product_sold_out", "".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
 //                }
-//            } catch (Exception e) {
+//            } catch (Exception e)
 //
 //            }
 
@@ -54,6 +54,11 @@ public class ZookeeperWatcher implements Watcher, ApplicationContextAware {
                 String path = event.getPath();
                 String soldOutFlag = new String(zooKeeper.getData(path, true, new Stat()));
                 System.out.println("zookeeper 数据结点发生变动，path,soldOutFlag" + "" + path + "" + soldOutFlag);
+                if ("true".equals(soldOutFlag)) {
+                    String productId = path.substring(path.lastIndexOf("/") + 1, path.length());
+                    //添加内存标记true
+                    productSoldOutMap.put("zk_product_sold_out", true);
+                }
                 if ("false".equals(soldOutFlag)) {
                     String productId = path.substring(path.lastIndexOf("/") + 1, path.length());
                     //删除内存标记

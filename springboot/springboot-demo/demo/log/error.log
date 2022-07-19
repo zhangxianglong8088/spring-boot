@@ -1,147 +1,19 @@
-2022-06-19-19-53 [main-EventThread] [org.apache.zookeeper.ClientCnxn] [ERROR] - Error while calling watcher 
-java.lang.NullPointerException
-	at com.example.springbootdemo.ZookeeperWatcher.process(ZookeeperWatcher.java:35)
+2022-07-19-09-54 [main-EventThread] [org.apache.zookeeper.ClientCnxn] [ERROR] - Error while calling watcher 
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'initZookeeper': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:220)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:233)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1273)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1234)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:494)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:349)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:342)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1172)
+	at com.example.springbootdemo.ZookeeperWatcher.process(ZookeeperWatcher.java:42)
 	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:530)
 	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:505)
-2022-06-19-19-53 [main-EventThread] [org.apache.zookeeper.ClientCnxn] [ERROR] - Error while calling watcher 
-java.lang.NullPointerException
-	at com.example.springbootdemo.ZookeeperWatcher.process(ZookeeperWatcher.java:35)
-	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:530)
-	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:505)
-2022-06-19-19-54 [main-EventThread] [org.apache.zookeeper.ClientCnxn] [ERROR] - Error while calling watcher 
-java.lang.NullPointerException
-	at com.example.springbootdemo.ZookeeperWatcher.process(ZookeeperWatcher.java:38)
-	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:530)
-	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:505)
-2022-06-19-19-56 [main-EventThread] [org.apache.zookeeper.ClientCnxn] [ERROR] - Error while calling watcher 
-java.lang.NullPointerException
-	at com.example.springbootdemo.config.FactoryBean.getBean(FactoryBean.java:32)
-	at com.example.springbootdemo.ZookeeperWatcher.process(ZookeeperWatcher.java:33)
-	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:530)
-	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:505)
-2022-06-19-19-56 [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] [ERROR] - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8080 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
-
-2022-06-19-19-57 [main-EventThread] [org.apache.zookeeper.ClientCnxn] [ERROR] - Error while calling watcher 
-java.lang.NullPointerException
-	at com.example.springbootdemo.config.FactoryBean.getBean(FactoryBean.java:32)
-	at com.example.springbootdemo.ZookeeperWatcher.process(ZookeeperWatcher.java:33)
-	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:530)
-	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:505)
-2022-06-19-19-59 [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] [ERROR] - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-A component required a bean of type 'org.apache.zookeeper.ZooKeeper' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'org.apache.zookeeper.ZooKeeper' in your configuration.
-
-2022-06-19-20-01 [main-EventThread] [org.apache.zookeeper.ClientCnxn] [ERROR] - Error while calling watcher 
-java.lang.NullPointerException
-	at com.example.springbootdemo.ZookeeperWatcher.process(ZookeeperWatcher.java:34)
-	at org.apache.zookeeper.ClientCnxn$EventThread.processEvent(ClientCnxn.java:530)
-	at org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:505)
-2022-06-19-20-05 [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] [ERROR] - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-A component required a bean of type 'org.apache.zookeeper.ZooKeeper' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'org.apache.zookeeper.ZooKeeper' in your configuration.
-
-2022-06-19-20-06 [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] [ERROR] - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-A component required a bean of type 'org.apache.zookeeper.ZooKeeper' that could not be found.
-
-
-Action:
-
-Consider defining a bean of type 'org.apache.zookeeper.ZooKeeper' in your configuration.
-
-2022-06-19-20-18 [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] [ERROR] - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8080 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
-
-2022-06-19-20-19 [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] [ERROR] - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8080 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
-
-2022-06-19-20-21 [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] [ERROR] - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8080 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
-
-2022-06-19-20-22 [main] [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] [ERROR] - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 8080 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
-
+2022-07-19-11-35 [http-nio-8090-exec-1] [com.example.springbootdemo.web.es.ESTestController] [ERROR] - save报错。。。
+2022-07-19-11-35 [http-nio-8090-exec-1] [com.example.springbootdemo.web.es.ESTestController] [ERROR] - save报错。。。
+2022-07-19-11-39 [http-nio-8090-exec-1] [com.example.springbootdemo.web.es.ESTestController] [ERROR] - save报错。。。
+2022-07-19-11-50 [http-nio-8090-exec-1] [com.example.springbootdemo.web.es.ESTestController] [ERROR] - save报错。。。
+2022-07-19-11-54 [http-nio-8090-exec-1] [com.example.springbootdemo.web.es.ESTestController] [ERROR] - update报错。。。
